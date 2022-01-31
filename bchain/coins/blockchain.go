@@ -52,6 +52,7 @@ import (
 	"github.com/trezor/blockbook/bchain/coins/vipstarcoin"
 	"github.com/trezor/blockbook/bchain/coins/zec"
 	"github.com/trezor/blockbook/common"
+	"github.com/trezor/blockbook/bchain/coins/sinovate"
 )
 
 type blockChainFactory func(config json.RawMessage, pushHandler func(bchain.NotificationType)) (bchain.BlockChain, error)
@@ -119,6 +120,8 @@ func init() {
 	BlockChainFactories["Unobtanium"] = unobtanium.NewUnobtaniumRPC
 	BlockChainFactories["DeepOnion"] = deeponion.NewDeepOnionRPC
 	BlockChainFactories["SnowGem"] = snowgem.NewSnowGemRPC
+	BlockChainFactories["Sinovate"] = sinovate.NewSinovateRPC
+	BlockChainFactories["Sinovate Testnet"] = sinovate.NewSinovateRPC
 	BlockChainFactories["Bitcore"] = bitcore.NewBitcoreRPC
 	BlockChainFactories["Omotenashicoin"] = omotenashicoin.NewOmotenashiCoinRPC
 	BlockChainFactories["Omotenashicoin Testnet"] = omotenashicoin.NewOmotenashiCoinRPC
