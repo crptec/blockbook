@@ -20,12 +20,12 @@
   },
   "backend": {
     "package_name": "backend-sinovate",
-    "package_revision": "satoshilabs-1",
+    "package_revision": "sinovate-1",
     "system_user": "sinovate",
     "version": "22.0.0",
-    "binary_url": "https://github.com/vertcoin-project/vertcoin-core/releases/download/0.17.1/vertcoind-v0.17.1-linux-amd64.zip",
+    "binary_url": "http://testnetcomp.sinovate.io/testnet/175938cb6/daemon.zip",
     "verification_type": "gpg",
-    "verification_source": "https://github.com/vertcoin-project/vertcoin-core/releases/download/0.17.1/vertcoind-v0.17.1-linux-amd64.zip.sig",
+    "verification_source": "https://github.com/crptec/blockbook/releases/download/v0.3.6/CHECKSUM.asc",
     "extract_command": "unzip -d backend",
     "exclude_files": [],
     "exec_command_template": "{{.Env.BackendInstallPath}}/{{.Coin.Alias}}/sind -datadir={{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend -conf={{.Env.BackendInstallPath}}/{{.Coin.Alias}}/{{.Coin.Alias}}.conf -pid=/run/{{.Coin.Alias}}/{{.Coin.Alias}}.pid",
@@ -64,7 +64,7 @@
     }
   },
   "meta": {
-    "package_maintainer": "Petr Kracik",
-    "package_maintainer_email": "petr.kracik@satoshilabs.com"
+    "package_maintainer": "xtdevcoin",
+    "package_maintainer_email": "crptec.fr@gmail.com"
   }
 }
